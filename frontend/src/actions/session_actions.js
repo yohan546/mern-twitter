@@ -1,34 +1,5 @@
-// src/actions/session_actions.js
 
-// Although there's only one function here so far, let's import the whole file since we will be adding more later
-import * as APIUtil from '../util/session_api_util';
-import jwt_decode from 'jwt-decode';
 
-// This pattern should be familiar to you from the full stack project
-
-export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
-
-import {
-    RECEIVE_SESSION_ERRORS,
-    RECEIVE_CURRENT_USER,
-  } from '../actions/session_actions';
-  
-  const _nullErrors = [];
-  
-  const SessionErrorsReducer = (state = _nullErrors, action) => {
-    Object.freeze(state);
-    switch(action.type) {
-      case RECEIVE_SESSION_ERRORS:
-        return action.errors;
-      case RECEIVE_CURRENT_USER:
-        return _nullErrors;
-      default:
-        return state;
-    }
-  };
-  
-
-  
   
   // src/actions/session_actions.js
   
