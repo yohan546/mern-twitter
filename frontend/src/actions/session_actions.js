@@ -55,9 +55,6 @@
           dispatch(receiveErrors(err.response.data));
       })
   )
-export const logoutUser = () => ({
-    type: RECEIVE_USER_LOGOUT
-});
 
 
 export const logout = () => dispatch => {
